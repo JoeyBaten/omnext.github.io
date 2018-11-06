@@ -1,0 +1,13 @@
+Best practice, custom modifying App Store Modules
+In case of custom modifying App Store Modules, the following must be done:
+
+1.	Add an entity in the App Store Module, with the name; “AddedCustomCodeToModule”
+2.	In the entity documentation describe exactly what has been changed. 
+3.	Then add an entity in a custom module with the name; "HelperDependencyAppStoreModuleChanged”. 
+4.	Set the association to the entity in the app store module.
+
+In this case, when following above steps, when an update is executed on the App Store module, 
+the developer sees in the error log that custom modifications had been made. 
+By updating the App Store Module these custom changes are lost. So, the developer can add those custom changes again based on
+the documentation. 
+By using above steps unforeseen bugs/production problems can be avoided.
